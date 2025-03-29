@@ -1725,7 +1725,7 @@ body.modal-open {
 }
 
 .reel-container {
-    aspect-ratio: 16 / 9; /* Set a fixed aspect ratio */
+    aspect-ratio: 14 / 9; /* Set a fixed aspect ratio */
     width: 100%;
     height: auto; /* Auto height based on aspect ratio */
     object-fit: cover;
