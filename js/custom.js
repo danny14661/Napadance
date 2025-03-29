@@ -410,8 +410,10 @@ let images = [
     "images/1b-300x225.png",
     "images/indiarepresent.jpeg",
     "images/92b-300x200.png",
-    "images/47.png"
-	
+    "images/47.png",
+	"images/ballet2.jpg",
+    "images/kathak2.jpg",
+    "images/bollywood2.jpg"
 ];
 
 let currentIndex = 0;

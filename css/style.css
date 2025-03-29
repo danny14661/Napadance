@@ -536,10 +536,13 @@ button.owl-next {
 } */
 
 .about_section {
-    text-align: center;
     padding: 50px 0;
-    background: url('../images/A_seamless_ultra-extremely_faded_white_background_overlay.jpg') repeat !important;
-
+text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../images/skulpture_contact.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
 }
 
 
@@ -559,7 +562,7 @@ button.owl-next {
 .about_taital {
     font-family: 'Lora', serif;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: 0.5px;
     line-height: 1.3;
     color: #111;
@@ -571,8 +574,8 @@ button.owl-next {
 }
 
 .image-card {
-    /* width: 300px;
-    height: 200px; */
+    width: 300px;
+   /*  height: 200px; */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -599,6 +602,12 @@ button.owl-next {
     text-align: center;
     letter-spacing: 0.5px;
   line-height: 1.3;
+  font-weight: bold;
+}
+
+.about_text_p
+{
+    font-weight: bold;
 }
 
 .about_text_1 {
@@ -607,7 +616,7 @@ button.owl-next {
     color: #252525; */
     margin: 0 auto;
     text-align: center;
-    /* font-weight: 500; */
+    font-weight: bold;
 }
 
 /* .about_img {
@@ -634,6 +643,7 @@ button.owl-next {
 .gallery-wrapper {
     display: flex;
     gap: 20px;
+    flex-direction: column;
 }
 
 .gallery-img {
@@ -643,6 +653,7 @@ button.owl-next {
     object-fit: cover;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    margin: 0px 8px;
 }
 
 .gallery-img:hover {
@@ -899,7 +910,11 @@ button.owl-next {
     padding-top: 40px; */
 
     padding: 60px 0;
-    background: url('../images/faded_transparent_pattern.png') repeat !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../images/skulpture_about.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
 }
 .contact_section_2 {
     width: 100%;
@@ -909,7 +924,7 @@ button.owl-next {
 .contact_taital{
     font-family: 'Lora', serif;
     font-size: 35px;
-    font-weight: 600;
+    font-weight: bold;
     letter-spacing: 0.5px;
     line-height: 1.3;
     color: #111;
@@ -1209,7 +1224,7 @@ button.owl-next {
     line-height: 1.3;
     color: black;
     text-transform: capitalize;
-    width: 23%;
+    width: 18%;
 }
 
 /* Mobile Responsive */
@@ -1269,12 +1284,14 @@ transition: transform 0.5s ease-in-out;
 perspective: 1000px;
 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 height: 90%;
+/* aspect-ratio: 16/9; */
 }
 .dance-card img {
 /* width: 100%;
 height: 300px; */
 object-fit: cover;
 transition: transform 0.5s ease-in-out;
+/* height: -webkit-fill-available; */
 }
 
 
@@ -1360,7 +1377,7 @@ background-size: cover;
 }
 
 .objectives-container {
-    background: linear-gradient(to right, #e3e3e3, #141414);
+    background: linear-gradient(to right, #e3e3e3, #d5c8ad);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -1492,7 +1509,7 @@ background-size: cover;
     margin-bottom: 20px;
 }
 .social-gallery iframe {
-    max-width: 100%;
+    max-width: -webkit-fill-available;
     border-radius: 10px;
     margin: 10px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
@@ -1509,7 +1526,7 @@ background-size: cover;
     aspect-ratio: 16/9; /* Ensures uniform height */
     overflow: hidden; 
     border-radius: 10px; /* Smooth rounded corners */
-    background: #fff; 
+    /* background: #fff;  */
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow */
     display: flex;
     align-items: center;
@@ -1617,7 +1634,7 @@ background-size: cover;
     border-bottom: none;
 }
 .download-item:hover {
-    background: #f1f1f1;
+    /* background: white; */
     transform: scale(1.02);
     border-radius: 8px;
 }
@@ -1675,7 +1692,7 @@ body.modal-open {
 
 .heropanel--video {
     width: 100%;
-    height: 500px; /* Adjust height */
+    height: 575px; /* Adjust height */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1727,6 +1744,34 @@ body.modal-open {
 
 }
 
+.dance-section 
+{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../images/ghungroo-bg.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* background-position: center !important; */
+    background-attachment: fixed !important;
+}
+
+.gallery-section, .download-section
+{
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../images/instruments.png') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* background-position: center !important; */
+    background-attachment: fixed !important;
+}
+
+.dance-section-book
+{
+
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/ghungroodance.png) !important;
+    /* background-size: cover !important; */
+    background-repeat: no-repeat !important;
+    background-position: right;
+    /* background-attachment: fixed !important;*/
+}
+
 /* Responsive Layout */
 @media (max-width: 768px) {
     .instagram-reel-grid {
@@ -1768,6 +1813,188 @@ body.modal-open {
     color: #fa7e64; /* Gold color for elegance */
 }
 
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+    /* .logo-text {
+        font-size: 14px;
+    } */
+    .navbar-expand-lg .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+    .about_taital {
+        font-size: 28px;
+    }
+    .about_text {
+        font-size: 16px;
+    }
+    .dance-card h2 {
+        font-size: 18px;
+    }
+    .dance-card p {
+        font-size: 14px;
+    }
+    .contact_taital {
+        font-size: 24px;
+    }
+    .contact_info h3 {
+        font-size: 18px;
+    }
+    .contact_info p {
+        font-size: 14px;
+    }
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .gallery-item {
+        width: calc(50% - 20px);
+    }
+    .gallery-item img {
+        height: auto;
+    }
+    .gallery-title {
+        font-size: 28px;
+    }
+    .gallery-filters button {
+        font-size: 14px;
+    }
+    .book-card {
+        padding: 15px;
+    }
+    .book-title {
+        font-size: 18px;
+    }
+    .book-price {
+        font-size: 16px;
+    }
+    .download-section h4 {
+        font-size: 24px;
+    }
+    .download-item .file-name {
+        font-size: 14px;
+    }
+    .download-btn {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+    .footer_section .location_main ul li {
+        padding: 20px 40px;
+    }
+    .copyright_text {
+        font-size: 14px;
+    }
+}
 
-  
+@media (max-width: 576px) {
+    .gallery-item {
+        width: 100%;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 10px;
+    }
+    .about_taital {
+        font-size: 24px;
+    }
+    .about_text {
+        font-size: 16px;
+    }
+
+    .about_text_1 {
+        font-size: 14px;
+    }
+    .dance-card h2 {
+        font-size: 16px;
+    }
+    .dance-card p {
+        font-size: 12px;
+    }
+    .contact_taital {
+        font-size: 20px;
+    }
+    .contact_info h3 {
+        font-size: 16px;
+    }
+    .contact_info p {
+        font-size: 14px;
+    }
+    .cta-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+    .gallery-title {
+        font-size: 30px;
+    }
+    .gallery-filters button {
+        font-size: 16px;
+    }
+    .book-card {
+        padding: 10px;
+    }
+    .book-title {
+        font-size: 16px;
+    }
+    .book-price {
+        font-size: 14px;
+    }
+    .download-section h4 {
+        font-size: 20px;
+    }
+    .download-item .file-name {
+        font-size: 12px;
+    }
+    .download-btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .footer_section .location_main ul li {
+        padding: 15px 30px;
+    }
+    .copyright_text {
+        font-size: 14px;
+    }
+
+    .heropanel--video 
+    {
+        height: 450px;
+    }
+
+    .objectives-container .nav-link
+    {
+        font-size: 14px;
+    }
+
+    .objectives-container .nav-item, .nav-tabs .nav-link.active, .nav-tabs .nav-link
+    {
+        width: 100%;
+    }
+
+    .objective-item
+    {
+        font-size: 14px;
+    }
+
+    .about_text_p
+    {
+        font-size: 14px;
+    }
+
+    .ghun-leg
+{
+    width: 20% !important;
+}
+}
+
+
+@media (max-width: 575px) {
+    .navbar-brand {
+        width: unset !important;
+    }
+}
+
+.ghun-leg
+{
+    width: 10%;
+}
 
