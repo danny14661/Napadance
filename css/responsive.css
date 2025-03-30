@@ -394,6 +394,8 @@ button.owl-next {
 
 .about_taital {
     font-size: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .dance-section h1
