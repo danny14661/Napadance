@@ -1453,7 +1453,9 @@ background-size: cover;
     color: #111;
     text-transform: capitalize;
     text-align: center; margin-bottom: 30px; 
+    display: flex;
 }
+
 .gallery-filters { text-align: center; margin-bottom: 20px; }
 .gallery-filters button { margin: 5px; }
 
@@ -1925,6 +1927,7 @@ body.modal-open {
     }
     .gallery-title {
         font-size: 30px;
+        display: flex;
     }
     .gallery-filters button {
         font-size: 16px;
