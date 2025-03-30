@@ -1989,6 +1989,12 @@ body.modal-open {
 {
     width: 20% !important;
 }
+
+.classes-strip-section h4
+{
+    font-size: 30px !important;
+}
+
 }
 
 
