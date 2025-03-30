@@ -35,9 +35,9 @@
    </head>
    <body>
     <div class="top-info common-section">
-        Natraj Academy Of Performing Arts PVT. LTD. <br/>
+        Natraj Academy Of Performing Arts Pvt. Ltd. <br/>
          Corporate Identification Number (CIN) NO :- U92412MH2012PTC231936 & <br/> 
-         Member of the International Dance Council (CID), UNESCO. Membership No: (22188).
+         Member of the International Dance Council (C.I.D), UNESCO. Membership No: (22188).
      </div>
       <!-- header section start -->
       <div class="header_section">
@@ -45,8 +45,8 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                <a class="navbar-brand" href="index.html"><img src="images/logo-transparent.png" style="height: 95px;"></a>
                <div class="logo-text">
-                <span class="logo-line">N.A.P.A</span>
-                  <span class="logo-line">PVT LTD</span>
+                <span class="logo-line">N.A.P.A.</span>
+                  <span class="logo-line">PVT. LTD.</span>
               </div>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
@@ -63,6 +63,9 @@
                         <a class="nav-link" href="Classes.html">Classes</a>
                      </li>
                      <li class="nav-item">
+                        <a class="nav-link" href="Events.html">Events</a>
+                    </li>
+                     <li class="nav-item">
                         <a class="nav-link" href="Gallery.html">Gallery</a>
                      </li>
                      <li class="nav-item">
@@ -73,7 +76,10 @@
                      <div class="user_icon"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div>
                      <div class="user_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                   </form> -->
-                  <button class="cta-button" style="margin-top: 0;"><i class="fa fa-phone" aria-hidden="true"></i> Call : +91 9324519659</button>
+                  <button class="cta-button" style="margin-top: 0;"><i class="fa fa-phone" aria-hidden="true"></i>
+                    <a href="tel:9324519659" style="text-decoration: none; color: inherit;">Call Now : +91
+                        9324519659</a>
+                </button>
                </div>
             </nav>
          </div>
@@ -143,16 +149,32 @@
          </div>
      </section>
 
+     <div class="container-fluid mb-5">
+        <div class="classes-strip-section">
+            <h4 class="text-center mb-4">We specialize in customized dances : Solo/Duet/Group Masterclass training for Bridal Sangeet & dance competitions.</h4>
+        </div>
+    </div>
+
      <div class="container mt-5 mb-5 dance-section-book">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <div class="book-card">
                     <img src="images/book.jpeg" alt="Bookook of Bharatnatyam">
                     <div class="book-title">Book of Bharatnatyam</div>
-                    <div class="book-price">Price: ₹2000</div>
+                    <div class="book-price">Price: ₹2500</div>
+                    <h2 class="festival-title">🎉 Special Offer 🎉</h2>
+                    <p class="offer-text">Order now and get this book at a festive price!</p>
+                    <div class="price-box">
+                        <span class="new-price">₹2000</span>
+                        <p class="offer-timer">Offer ends in: <span id="countdown"></span></p>
+        
+            <button class="cta-button mt-2" onclick="location.href='Contact.html'">Order Now</button>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     </div>
       <!-- service section end -->
 <!-- footer section start -->
@@ -163,15 +185,20 @@
             <ul>
                 <li>
                     <img src="images/map-icon.png">
-                    <span class="padding_15 contact_loc" id="current-location">Anand Rao Pawar High School</span>
+                    <span class="padding_15 contact_loc" id="current-location">Anand Rao Pawar High
+                        School</span>
                 </li>
                 <li>
                     <img src="images/call-icon.png">
-                    <span class="padding_15 contact_loc">+91 9324519659</span>
+                    <span class="padding_15 contact_loc"><a href="tel:9324519659"
+                            style="text-decoration: none; color: inherit;">+91 9324519659</a></span> <span
+                        class="padding_15 contact_loc">/ <a href="tel:9167266737"
+                            style="text-decoration: none; color: inherit;">+91 9167266737</a></span>
                 </li>
                 <li>
                     <img src="images/mail-icon.png">
-                    <span class="padding_15 contact_loc">napadance@yahoo.com</span>
+                    <span class="padding_15 contact_loc"><a href="mailto:napadance@yahoo.com"
+                            style="text-decoration: none; color: inherit;">napadance@yahoo.com</a></span>
                 </li>
             </ul>
            </div>
@@ -274,5 +301,27 @@
       // Adjust map to fit all markers
       map.fitBounds(markerGroup.getBounds(), { padding: [50, 50] }); // Adjust padding for better view
       </script>
+
+<script>
+// Set the offer end date (change as needed)
+let offerEndDate = new Date("March 31, 2025 23:59:59").getTime();
+
+let timer = setInterval(function() {
+    let now = new Date().getTime();
+    let distance = offerEndDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("countdown").innerHTML = "Offer Expired";
+    }
+}, 1000);
+</script>
    </body>
 </html>

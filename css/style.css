@@ -538,7 +538,7 @@ button.owl-next {
 .about_section {
     padding: 50px 0;
 text-align: center;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../images/skulpture_contact.png') !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url('../images/skulpture_contact.png') !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -910,7 +910,7 @@ text-align: center;
     padding-top: 40px; */
 
     padding: 60px 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),url('../images/skulpture_about.png') !important;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),url('../images/skulpture_about.png') !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -1046,7 +1046,7 @@ text-align: center;
 .location_main li {
     float: left;
     color: #ffffff;
-    padding: 30px 70px 30px 70px;
+    padding: 30px 55px 30px 55px;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -1224,7 +1224,7 @@ text-align: center;
     line-height: 1.3;
     color: black;
     text-transform: capitalize;
-    width: 18%;
+    width: 12%;
 }
 
 /* Mobile Responsive */
@@ -1769,8 +1769,9 @@ body.modal-open {
     background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/ghungroodance.png) !important;
     /* background-size: cover !important; */
     background-repeat: no-repeat !important;
-    background-position: right;
+    background-position: right center !important;
     /* background-attachment: fixed !important;*/
+    background-size: auto 100% !important;
 }
 
 /* Responsive Layout */
@@ -1812,6 +1813,7 @@ body.modal-open {
 .book-price {
     font-size: 18px;
     color: #fa7e64; /* Gold color for elegance */
+    text-decoration: line-through;
 }
 
 @media (max-width: 768px) {
@@ -2001,3 +2003,232 @@ body.modal-open {
     width: 10%;
 }
 
+.classes-strip-section
+{
+    /* max-width: 700px; */
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../images/instruments.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* background-position: center !important; */
+    background-attachment: fixed !important;
+
+
+}
+
+.classes-strip-section h4{
+    font-family: 'Lora', serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    color: #111;
+    text-transform: capitalize;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adds spacing between icons */
+    flex-wrap: wrap; /* Ensures icons wrap on smaller screens */
+    margin-top: 15px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: inherit; /* Change color on hover */
+}
+
+.social-icons a:hover:nth-child(1) { color: #1877F2; }  /* Facebook */
+.social-icons a:hover:nth-child(2) { color: #E4405F; }  /* Instagram */
+.social-icons a:hover:nth-child(3) { color: #0A66C2; }
+.social-icons a:hover:nth-child(4) { color: #FF0000; }  /* YouTube */
+
+.offer-section {
+    background: url('your-gudi-padwa-image.jpg') center/cover no-repeat;
+    padding: 40px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.festival-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    color: white;
+}
+
+.offer-text {
+    font-size: 18px;
+    color: white;
+}
+
+.price-box {
+    margin: 15px 0;
+}
+
+
+.new-price {
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.offer-timer {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.order-btn {
+    background: #ff6600;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #ff3300;
+    transform: scale(1.05);
+}
+
+.timeline {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: linear-gradient(to bottom, #ff5733, #ffbd69);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    from { box-shadow: 0 0 10px #fa7e64; }
+    to { box-shadow: 0 0 20px #ffbd69; }
+}
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.timeline-item.left {
+    left: 0;
+    /* text-align: right; */
+}
+.timeline-item.right {
+    left: 55%;
+}
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ff5733, #ffbd69);
+    border-radius: 50%;
+    left: 50%;
+    top: 20px;
+    margin-left: -10px;
+    box-shadow: 0 0 10px #ff5733;
+    animation: pulse 1.5s infinite alternate;
+}
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+@media (max-width: 768px) {
+    .timeline::after {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 90%;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 40px;
+    }
+    .timeline-dot {
+        left: 20px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item::before {
+        width: 20px;
+    }
+    .timeline-item.left::before, 
+    .timeline-item.right::before {
+        left: -20px;
+    }
+}
+
+.timeline
+{
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to bottom, #f8f9fa, #e3e6e8); */
+    padding: 40px;
+    /* overflow-x: hidden;     */
+}
+
+.timeline-section
+{
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url(../images/faded_transparent_pattern.png) !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    /* background-position: center !important; */
+    background-attachment: fixed !important;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 30px; /* Branch width */
+    height: 4px; /* Thickness of the branch */
+    background: linear-gradient(to right, #ff5733, #ffbd69);
+    top: 30px;
+}
+
+.timeline-item.left::before {
+    right: -30px; /* Extends branch to center */
+}
+
+.timeline-item.right::before {
+    left: -30px; /* Extends branch to center */
+}
+
+.timeline-item li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #333;
+}
