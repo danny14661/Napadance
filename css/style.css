@@ -1995,6 +1995,10 @@ body.modal-open {
     font-size: 30px !important;
 }
 
+.timeline-item {
+    width: 120% !important;
+}
+
 }
 
 
