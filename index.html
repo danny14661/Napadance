@@ -308,21 +308,18 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 mt-5">
                     <div class="contact_main">
-                        <form action="/action_page.php">
+                        <form action="send_email.php" method="POST">
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Your Name" name="Name" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Email Address" name="Email"
-                                    required>
+                                <input type="email" class="form-control" placeholder="Email Address" name="Email" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Phone Number" name="Phone Number"
-                                    required>
+                                <input type="text" class="form-control" placeholder="Phone Number" name="Phone" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" placeholder="Leave a Message" rows="5" name="Message"
-                                    required></textarea>
+                                <textarea class="form-control" placeholder="Leave a Message" rows="5" name="Message" required></textarea>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="cta-button">Submit Now</button>
