@@ -288,9 +288,12 @@
                             <i class="fas fa-envelope"></i>
                             <h3><strong>Email</strong></h3>
                         </div>
-                        <p class="ml-5"><b>o</b><a href="mailto:napadance@yahoo.com"
-                                style="text-decoration: none; color: inherit;"> napadance@yahoo.com </a>
+                        <p class="ml-5"><b>o</b><a href="mailto:ashlesha@napadance.in"
+                                style="text-decoration: none; color: inherit;"> ashlesha@napadance.in </a>
                         </p>
+                        <p class="ml-5"><b>o</b><a href="mailto:napadance@yahoo.com"
+                            style="text-decoration: none; color: inherit;"> napadance@yahoo.com </a>
+                    </p>
 
                         <div class="icon-box">
                             <i class="fas fa-phone-alt"></i>
@@ -368,21 +371,39 @@
                 <div class="location_main">
                     <ul>
                         <li>
+                            <div class="mb-2">
                             <img src="images/map-icon.png">
-                            <span class="padding_15 contact_loc" id="current-location">Anand Rao Pawar High
-                                School</span>
+                            <span class="padding_15 contact_loc">Anand Rao Pawar High
+                                School</span><br/>
+                                </div>
+                                <div>
+                                <img src="images/map-icon.png">
+                            <span class="padding_15 contact_loc">Dosti Acres, Wadala&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </div>
                         </li>
                         <li>
+                            <div class="mb-2">
                             <img src="images/call-icon.png">
                             <span class="padding_15 contact_loc"><a href="tel:9324519659"
-                                    style="text-decoration: none; color: inherit;">+91 9324519659</a></span> <span
-                                class="padding_15 contact_loc">/ <a href="tel:9167266737"
+                                    style="text-decoration: none; color: inherit;">+91 9324519659</a></span><br/>
+                                </div>
+                                <div>
+                                    <img src="images/call-icon.png">
+                                    <span class="padding_15 contact_loc"><a href="tel:9167266737"
                                     style="text-decoration: none; color: inherit;">+91 9167266737</a></span>
+                                </div>
                         </li>
                         <li>
+                            <div class="mb-2">
+                                <img src="images/mail-icon.png">
+                                <span class="padding_15 contact_loc"><a href="mailto:ashlesha@napadance.in"
+                                    style="text-decoration: none; color: inherit;">ashlesha@napadance.in</a></span><br/>
+                                </div>
+                            <div >
                             <img src="images/mail-icon.png">
                             <span class="padding_15 contact_loc"><a href="mailto:napadance@yahoo.com"
                                     style="text-decoration: none; color: inherit;">napadance@yahoo.com</a></span>
+                                </div>
                         </li>
                     </ul>
                 </div>
@@ -475,9 +496,9 @@
         locations.forEach(function (location) {
             var marker = L.marker([location.lat, location.lng])
                 .bindPopup(`<strong>${location.fullAddress}</strong>`)
-                .on('click', function () {
-                    document.getElementById("current-location").innerHTML = `${location.shortName}`;
-                });
+                // .on('click', function () {
+                //     document.getElementById("current-location").innerHTML = `${location.shortName}`;
+                // });
 
             markerGroup.addLayer(marker);
         });
