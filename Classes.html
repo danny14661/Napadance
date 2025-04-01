@@ -91,7 +91,7 @@
                         <a class="nav-link" href="Gallery.html">Gallery</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.html#contact-form">Contact Us</a>
                      </li>
                   </ul>
                   <!-- <form class="form-inline my-2 my-lg-0">
@@ -189,7 +189,7 @@
                     <div class="price-box">
                         <span class="new-price">₹2000</span><br/>
         
-            <button class="cta-button mt-2" onclick="location.href='contact.html'">Order Now</button>
+            <button class="cta-button mt-2" onclick="redirectToContact()">Order Now</button>
                     </div>
                 </div>
             </div>
@@ -335,5 +335,13 @@ let timer = setInterval(function() {
     }
 }, 1000);
 </script> -->
+
+<script>
+    function redirectToContact() {
+    let subjectText = encodeURIComponent("Request for Book Order - Bharatnatyam");
+    location.href = `contact.html?subject=${subjectText}#contact-form`;
+}
+    </script>
+    
    </body>
 </html>

@@ -67,7 +67,7 @@
                         <a class="nav-link" href="Gallery.html">Gallery</a>
                      </li>
                      <li class="nav-item active">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.html#contact-form">Contact Us</a>
                      </li>
                   </ul>
                   <!-- <form class="form-inline my-2 my-lg-0">
@@ -93,7 +93,7 @@
                 Unlock the Magic of different styles at N.A.P.A. Pvt. Ltd. </h1>
                 <h1 class="contact_taital">
                 Ready to Dance Your Heart Out? Join Us Today</h1>
-            <div class="row mt-5">
+            <div class="row mt-5" id="contact-form">
                 <!-- Contact Info -->
                 <div class="col-md-5 col-sm-12">
                     <div class="contact_info">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <!-- Contact Form -->
-                <div class="col-md-7 col-sm-12 mt-5">
+                <div class="col-md-7 col-sm-12 mt-5" >
                     <div class="contact_main">
                         <form action="send_email.php" method="POST">
                             <div class="mb-3">
@@ -133,6 +133,9 @@
                             </div>
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Phone Number" name="Phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" required>
                             </div>
                             <div class="mb-3">
                                 <textarea class="form-control" placeholder="Leave a Message" rows="5" name="Message" required></textarea>
@@ -279,5 +282,18 @@
       // Adjust map to fit all markers
       map.fitBounds(markerGroup.getBounds(), { padding: [50, 50] }); // Adjust padding for better view
       </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("subject")) {
+            let subjectInput = document.querySelector("input[name='subject']");
+            if (subjectInput) {
+                subjectInput.value = params.get("subject").replace(/\+/g, " ");
+            }
+        }
+    });
+    </script>
+
    </body>
 </html>

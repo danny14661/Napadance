@@ -99,7 +99,7 @@
                             <a class="nav-link" href="Gallery.html">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <a class="nav-link" href="contact.html#contact-form">Contact Us</a>
                         </li>
                     </ul>
                     <!-- <form class="form-inline my-2 my-lg-0">
@@ -336,16 +336,24 @@
     </script>
 
     <script>
-        $(window).on("scroll", function () {
-            $(".timeline-item").each(function () {
-                let position = $(this).offset().top;
-                let windowHeight = $(window).height();
-                let scrollPos = $(window).scrollTop();
-                if (scrollPos + windowHeight - 50 > position) {
-                    $(this).addClass("show");
-                }
-            });
+        $(document).ready(function() {
+    // Show the first timeline item immediately
+    $(".timeline-item:first").addClass("show");
+
+    // Apply scroll effect for the rest of the items
+    $(window).on("scroll", function() {
+        $(".timeline-item").each(function(index) {
+            let position = $(this).offset().top;
+            let windowHeight = $(window).height();
+            let scrollPos = $(window).scrollTop();
+
+            // Skip the first item since it's already shown
+            if (index !== 0 && scrollPos + windowHeight - 50 > position) {
+                $(this).addClass("show");
+            }
         });
+    });
+});
     </script>
 </body>
 
