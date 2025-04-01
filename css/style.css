@@ -6,10 +6,9 @@
 @import url(animate.min.css);
 @import url(normalize.css);
 @import url(icomoon.css);
-@import url(css/font-awesome.min.css);
+@import url(font-awesome.min.css);
 @import url(meanmenu.css);
 @import url(owl.carousel.min.css);
-@import url(swiper.min.css);
 @import url(slick.css);
 @import url(jquery.fancybox.min.css);
 @import url(jquery-ui.css);
@@ -1766,12 +1765,13 @@ body.modal-open {
 .dance-section-book
 {
 
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/ghungroodance.png) !important;
-    /* background-size: cover !important; */
+    background:  
+    url(../images/ghungroodance.png),
+    url(../images/classes-left.png)
+     !important;
     background-repeat: no-repeat !important;
-    background-position: right center !important;
-    /* background-attachment: fixed !important;*/
-    background-size: auto 100% !important;
+    background-position: right center,-20% center !important;
+    background-size: auto 80%,auto 100%  !important;
 }
 
 /* Responsive Layout */

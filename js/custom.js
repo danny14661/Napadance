@@ -369,71 +369,44 @@ $(function () {
 
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const words = ["Bollywood", "Indian Classical", "Indian Folk","Kathak","Semi Classical","Bharatnatyam"];
-    let index = 0;
-    let wordIndex = 0;
-    let isDeleting = false;
-    const changingWord = document.getElementById("changing-word");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const words = ["Bollywood", "Indian Classical", "Indian Folk","Kathak","Semi Classical","Bharatnatyam"];
+//     let index = 0;
+//     let wordIndex = 0;
+//     let isDeleting = false;
+//     const changingWord = document.getElementById("changing-word");
 
-    function typeEffect() {
-        let currentWord = words[index];
-        let displayedText = changingWord.textContent;
+//     function typeEffect() {
+//         let currentWord = words[index];
+//         let displayedText = changingWord.textContent;
 
-        if (!isDeleting) {
-            // Typing effect
-            changingWord.textContent = currentWord.substring(0, displayedText.length + 1);
-        } else {
-            // Deleting effect
-            changingWord.textContent = currentWord.substring(0, displayedText.length - 1);
-        }
+//         if (!isDeleting) {
+//             // Typing effect
+//             changingWord.textContent = currentWord.substring(0, displayedText.length + 1);
+//         } else {
+//             // Deleting effect
+//             changingWord.textContent = currentWord.substring(0, displayedText.length - 1);
+//         }
 
-        let typingSpeed = isDeleting ? 50 : 100; // Typing speed (slower when typing, faster when deleting)
+//         let typingSpeed = isDeleting ? 50 : 100; // Typing speed (slower when typing, faster when deleting)
 
-        if (!isDeleting && displayedText === currentWord) {
-            typingSpeed = 1000; // Pause after typing
-            isDeleting = true;
-        } else if (isDeleting && displayedText === "") {
-            isDeleting = false;
-            index = (index + 1) % words.length;
-            typingSpeed = 500; // Pause before typing next word
-        }
+//         if (!isDeleting && displayedText === currentWord) {
+//             typingSpeed = 1000; // Pause after typing
+//             isDeleting = true;
+//         } else if (isDeleting && displayedText === "") {
+//             isDeleting = false;
+//             index = (index + 1) % words.length;
+//             typingSpeed = 500; // Pause before typing next word
+//         }
 
-        setTimeout(typeEffect, typingSpeed);
-    }
+//         setTimeout(typeEffect, typingSpeed);
+//     }
 
-    typeEffect();
-});
+//     typeEffect();
+// });
 
 
-let images = [
-    "images/1b-300x225.png",
-    "images/indiarepresent.jpeg",
-    "images/92b-300x200.png",
-    "images/47.png",
-	"images/ballet2.jpg",
-    "images/kathak2.jpg",
-    "images/bollywood2.jpg"
-];
 
-let currentIndex = 0;
-let mainImage = document.getElementById("mainImage");
-
-// Function to change image
-function changeMainImage(imgElement) {
-    mainImage.style.opacity = "0";
-    setTimeout(() => {
-        mainImage.src = imgElement.src;
-        mainImage.style.opacity = "1";
-    }, 300);
-    currentIndex = images.indexOf(imgElement.src);
-}
-
-// Auto-change image every 4 seconds
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    changeMainImage({ src: images[currentIndex] });
-}, 4000);
 
 function initMap() {
     // Define locations
