@@ -4,23 +4,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['Name']);
     $email = htmlspecialchars($_POST['Email']);
     $phone = htmlspecialchars($_POST['Phone']);
+    $subject = htmlspecialchars($_POST['subject']);
     $message = htmlspecialchars($_POST['Message']);
 
-    // Set the recipient email address (your email)
-    $to = "youremail@example.com"; // Replace with your email address
-    $subject = "New Contact Form Submission";
+    // Set recipient email address
+    $to = "ashlesha@napadance.in"; // Replace with your email address
+    $email_subject = "New Enquiry Form Submission";
 
-    // Compose the email content
+    // Compose email content
     $body = "
     <html>
     <head>
-        <title>New Contact Form Submission</title>
+        <title>New Enquiry Form Submission</title>
     </head>
     <body>
         <h2>Contact Form Details</h2>
         <p><strong>Name:</strong> $name</p>
         <p><strong>Email:</strong> $email</p>
         <p><strong>Phone:</strong> $phone</p>
+        <p><strong>Subject:</strong> $subject</p>
         <p><strong>Message:</strong><br>$message</p>
     </body>
     </html>
@@ -31,11 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "Content-Type: text/html; charset=UTF-8" . "\r\n";
     $headers .= "From: $email" . "\r\n";
 
-    // Send the email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Thank you for contacting us! We will get back to you soon.";
+    // Send email
+    if (mail($to, $email_subject, $body, $headers)) {
+        echo json_encode(["status" => "success", "message" => "Thank you for contacting us! We will get back to you soon."]);
     } else {
-        echo "Sorry, there was an error sending your message. Please try again later.";
+        echo json_encode(["status" => "error", "message" => "Sorry, there was an error sending your message. Please try again later."]);
     }
 }
 ?>

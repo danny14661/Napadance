@@ -108,9 +108,12 @@
                         <div class="icon-box">
                             <i class="fas fa-envelope"></i> <h3><strong>Email</strong></h3>
                         </div>
-                        <p class="ml-5"><b>o</b><a href="mailto:napadance@yahoo.com"
-                            style="text-decoration: none; color: inherit;"> napadance@yahoo.com </a>
+                        <p class="ml-5 mb-1"><b>o</b><a href="mailto:ashlesha@napadance.in"
+                            style="text-decoration: none; color: inherit;"> ashlesha@napadance.in </a>
                     </p>
+                    <p class="ml-5"><b>o</b><a href="mailto:napadance@yahoo.com"
+                        style="text-decoration: none; color: inherit;"> napadance@yahoo.com </a>
+                </p>
                     
                         <div class="icon-box">
                             <i class="fas fa-phone-alt"></i> <h3><strong>Contact</strong></h3>
@@ -124,7 +127,7 @@
                 <!-- Contact Form -->
                 <div class="col-md-7 col-sm-12 mt-5" >
                     <div class="contact_main">
-                        <form action="send_email.php" method="POST">
+                        <form id="contactForm">
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="Your Name" name="Name" required>
                             </div>
@@ -142,10 +145,14 @@
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="cta-button">Submit Now</button>
-
                             </div>
                         </form>
                     </div>
+                    <div id="responseMessage" class="response-message text-center mt-4" style="display: none;">
+                        <img src="images/thankyou.png" alt="Thank You" style="width: 50%;">
+                        <p id="responseText" class="mt-5 common-section"></p>
+                    </div>
+
                     <div class="social-icons mt-5">
                         <a href="https://www.facebook.com/share/18TZvqRZfM/" target="_blank" class="mx-2">
                             <i class="fab fa-facebook-f"></i>
@@ -294,6 +301,36 @@
         }
     });
     </script>
+
+<script>
+$(document).ready(function () {
+    $("#contactForm").submit(function (event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var formData = $(this).serialize(); // Serialize form data
+
+        $.ajax({
+            type: "POST",
+            url: "send_email.php",
+            data: formData,
+            dataType: "json",
+            success: function (response) {
+                if (response.status === "success") {
+                    $("#contactForm").hide(); // Hide the form
+                    $("#responseText").text(response.message);
+                    $("#responseMessage").fadeIn(); // Show response message
+                } else {
+                    alert(response.message); // Show error message
+                }
+            },
+            error: function () {
+                alert("An error occurred while submitting the form.");
+            }
+        });
+    });
+});
+</script>
+
 
    </body>
 </html>
